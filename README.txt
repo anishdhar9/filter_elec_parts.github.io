@@ -65,6 +65,8 @@ RESULTS TABLE / EXPORT
   Quantity, Level, and Row - Machine, Search Parameter, Search Expression,
   and Sheet are left out of the screen since they're implied by the
   detected machine/context line and don't vary usefully row to row.
-- The downloaded Excel/CSV keeps all of it: Machine, Search Parameter,
-  Search Expression, Item Number, Description, Assembly, Assembly Path,
-  Quantity, Level, Source Sheet, and Source Row, for every selected row.
+- There are no row checkboxes and no CSV download - "Download as Excel"
+  writes every current result straight to an .xlsx file, with the full set
+  of columns kept for provenance: Machine, Search Parameter, Search
+  Expression, Item Number, Description, Assembly, Assembly Path, Quantity,
+  Level, Source Sheet, and Source Row.
