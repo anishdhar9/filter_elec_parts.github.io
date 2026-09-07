@@ -9,7 +9,7 @@
 <div class="tablewrap"><table><thead><tr><th>Item Number</th><th>Description</th><th>Assembly</th><th>Quantity</th><th>Level</th><th>Row</th></tr></thead><tbody id="body"></tbody></table></div></section></main>
 <script src="xlsx.full.min.js"></script><script>
 'use strict';
-const DEFAULTS={GFB:['AHU','Spray Pump => peristaltic','Blower','Scrubber => Wet Scrubber','Police Filter','Vacuum and Pump','Booster and Pump','Dosing Pump => metering','Winch and Motor'],HSG:['AHU','Blower','Vacuum and Pump','motor','Spray Pump => Peristaltic','Dosing Pump => metering','Air Filter => Filter Bag', 'AODD and PUMP', 'sight and glass'],Mills:[],Coater:['AHU','Spray Pump => peristaltic','Dosing Pump => metering','de duster and Duster','booster and pump','Solution and Tank','valve and dessicant']};
+const DEFAULTS={GFB:['AHU','Spray Pump => peristaltic','Blower','Scrubber => Wet Scrubber','Police Filter','Vacuum and Pump','Booster and Pump','Dosing Pump => metering','Winch and Motor'],HSG:['AHU','Blower','Vacuum and Pump','motor','Spray Pump => Peristaltic','Dosing Pump => metering','Air Filter => Filter Bag', 'AODD and PUMP', 'sight and glass'],Mills:[],Coater:['AHU','Spray Pump => peristaltic','Dosing Pump => metering','de duster and Duster','booster and pump','Solution and Tank','motor and MOTOR','drive and gearbox','valve and dessicant']};
 const MACHINES={'7-100':'GFB','7-230':'HSG','7-260':'Mills','7-700':'Coater'};
 const PURCHASE_PREFIXES=['7-999-','7-972-'];
 const $=x=>document.getElementById(x);let wb=null,fileName='',found=[],currentMachine='';
