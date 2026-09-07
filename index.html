@@ -4,9 +4,8 @@
 <section class="card"><div class="grid">
 <div class="field"><label>Excel or CSV BOM</label><input id="file" type="file" accept=".xlsx,.xls,.xlsb,.csv,.txt"></div>
 <div class="field"><label>Search for</label><select id="keyword" disabled><option>Choose a file first</option></select></div></div>
-<p id="context" class="help hidden"></p>
 <div class="actions"><button id="search" disabled>Search BOM</button><button id="clear" class="secondary">Clear Results</button></div><div id="status" class="status">Choose a BOM file. Processing stays on this computer.</div></section>
-<section id="results" class="card hidden"><div class="resultsHead"><div><h2>Results</h2><div id="summary" class="help"></div></div><div class="actions"><button id="xlsx">Download as Excel</button></div></div>
+<section id="results" class="card hidden"><p id="context" class="help hidden"></p><div class="resultsHead"><div><h2>Results</h2><div id="summary" class="help"></div></div><div class="actions"><button id="xlsx">Download as Excel</button></div></div>
 <div class="tablewrap"><table><thead><tr><th>Item Number</th><th>Description</th><th>Assembly</th><th>Quantity</th><th>Level</th><th>Row</th></tr></thead><tbody id="body"></tbody></table></div></section></main>
 <script src="xlsx.full.min.js"></script><script>
 'use strict';
