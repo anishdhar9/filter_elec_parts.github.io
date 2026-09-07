@@ -55,9 +55,16 @@ QUANTITY ROLLUP AND ASSEMBLY
   Cleaning System) each matching row belongs to; hover it to see the full
   parent path. Parts like valves and pipes are often reused under several
   different assemblies with different quantities in each place, unlike a
-  motor or pump that usually appears once. When a search result contains the
-  same item number under more than one assembly, an "Assembly" dropdown
-  appears above the results so you can narrow the list down to the specific
-  one you mean.
+  motor or pump that usually appears once - the Assembly column is how you
+  tell those occurrences apart in the results.
 - On a flat BOM with no Level column, quantities are shown as-is and the
-  Assembly column/filter do not appear.
+  Assembly column is blank.
+
+RESULTS TABLE / EXPORT
+- The on-screen table only shows Item Number, Description, Assembly,
+  Quantity, Level, and Row - Machine, Search Parameter, Search Expression,
+  and Sheet are left out of the screen since they're implied by the
+  detected machine/context line and don't vary usefully row to row.
+- The downloaded Excel/CSV keeps all of it: Machine, Search Parameter,
+  Search Expression, Item Number, Description, Assembly, Assembly Path,
+  Quantity, Level, Source Sheet, and Source Row, for every selected row.
