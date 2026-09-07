@@ -1,17 +1,42 @@
 BOM SEARCH TOOL - OFFLINE
 
-1. Keep BOM_Search.html and xlsx.full.min.js together.
-2. Open BOM_Search.html in Edge or Chrome.
-3. Choose the BOM and search.
+1. Keep index.html and xlsx.full.min.js together.
+2. Open index.html in Edge or Chrome.
+3. Choose the BOM export and search.
+
+MACHINE DETECTION
+- The machine is detected automatically from the top-level item number's
+  prefix, read from the BOM's own "Item: Item No.: ..." line - there is no
+  Machine or Worksheet picker to set by hand:
+    7-100-xxxx => GFB
+    7-230-xxxx => HSG
+    7-260-xxxx => Mills
+    7-700-xxxx => Coater
+- If the prefix isn't one of these, the tool shows an error and search stays
+  disabled rather than guessing.
+- Once detected, a line under the file picker shows the machine, the SPN and
+  PN parsed out of the top-level item's own description, the top item
+  number, and the remaining description text - e.g.
+  "HSG · SPN 016779 · PN 22800 · 7-230-20530-0 · MAIN GRANULATOR HSG PRO
+  100L MSN LABORAT".
+- The BOM export is expected to have exactly one worksheet; the first sheet
+  is always used.
+
+PURCHASED-PART SCOPE
+- Only rows whose item number starts with 7-999- or 7-972- are searched -
+  these are the two prefixes used for purchased/catalog parts. This isn't
+  user-editable.
 
 KEYWORD RULES
-- Police Filter: phrase search. The normalized phrase must appear in that order.
-- Charging AND Valve: both terms must occur in the same description, in any order.
+- Police Filter: phrase search. The normalized phrase must appear in that
+  order.
+- Charging AND Valve: both terms must occur in the same description, in any
+  order.
 - Charging AND Butterfly AND Valve: all three terms must occur.
 - AND is case-insensitive.
-
-GFB now defaults to "Charging AND Valve".
-Existing browser keyword settings use a new configuration version and will not retain the older broad "Valve" entry.
+- Keyword lists are fixed per machine in the file itself (DEFAULTS in
+  index.html) - there is no in-browser keyword editor. To change a
+  machine's keywords, edit that list in index.html directly.
 
 DISPLAY LABEL TO SEARCH EXPRESSION
 - Use: Display Label => actual search expression
