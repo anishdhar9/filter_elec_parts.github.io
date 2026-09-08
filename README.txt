@@ -1,4 +1,4 @@
-BOM SEARCH TOOL - OFFLINE
+BOM EXPLORER - OFFLINE
 
 1. Keep index.html and xlsx.full.min.js together.
 2. Open index.html in Edge or Chrome.
@@ -37,6 +37,10 @@ KEYWORD RULES
 - Keyword lists are fixed per machine in the file itself (DEFAULTS in
   index.html) - there is no in-browser keyword editor. To change a
   machine's keywords, edit that list in index.html directly.
+- A rule that starts with ! (e.g. '!IR and Sensor and Mounting') skips the
+  purchased-part prefix check for that keyword only - use this for specific
+  items you want found even though their item number isn't 7-999-/7-972-.
+  Every other keyword still requires the normal prefix.
 
 DISPLAY LABEL TO SEARCH EXPRESSION
 - Use: Display Label => actual search expression
